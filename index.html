@@ -244,7 +244,7 @@ footer{padding:40px;font-size:.9rem;color:#6b7280;text-align:center}
   <h2 class="section-title">What We Enable</h2>
   <div class="feature-grid">
 
-    <div class="feature" onclick="openModal()">
+    <div class="feature" onclick="openModal('DeepResearch')">
       <h3>Deep Research</h3>
       <p>Structured exploration and deep validation.</p>
     </div>
@@ -325,10 +325,11 @@ footer{padding:40px;font-size:.9rem;color:#6b7280;text-align:center}
 <footer>© 2026 myGuidr — An independent research and prototyping initiative.</footer>
 
 <!-- MODAL -->
-<div class="modal" id="modal">
+<!--Adding separate popup modals for custom text-->
+<div class="modal" id="DeepResearch">
   <div class="modal-box">
-    <h3>More Details</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Research prototyping quantum pipelines neural architecture lorem ipsum deep learning systems experimental frameworks innovation stack.</p>
+    <h3>Deep Research</h3>
+    <p>We help transform ambitious ideas into structured research directions. This includes model development, literature exploration, problem formulation, identifying research gaps, and designing feasible technical approaches. Whether for academic work, thesis projects, or exploratory AI systems, we focus on building a solid intellectual foundation before implementation begins.</p>
     <div class="close" onclick="closeModal()">Close</div>
   </div>
 </div>
@@ -431,8 +432,21 @@ setInterval(()=>{
 
 // modal
 const modal=document.getElementById("modal");
-function openModal(){modal.classList.add("show");document.body.style.overflow="hidden"}
-function closeModal(){modal.classList.remove("show");document.body.style.overflow="auto"}
+
+//function to open modal with header
+  function openModal(modalId){
+  const modal = document.getElementById(modalId);
+  modal.classList.add("show");
+  document.body.style.overflow="hidden";
+}
+
+//function to close all open modals
+function closeModal(){
+  document.querySelectorAll(".modal").forEach(m => m.classList.remove("show"));
+  document.body.style.overflow="auto";
+}
+
+  
 
 </script>
 
