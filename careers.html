@@ -165,7 +165,7 @@ footer{
 
 <body>
 
-<!-- Nav -->
+<!-- NAV -->
 <div class="nav">
   <div class="logo">myGuidr</div>
   <div class="nav-links">
@@ -185,6 +185,7 @@ footer{
   </p>
 
   <!-- Role card-->
+  <div id="openRoles">
 
     <div class="card">
       <div class="role-title">Research Intern (AI/ML)</div>
@@ -200,8 +201,26 @@ footer{
         <span class="tag">AI/ML</span>
       </div>
 
-      <a href="" target="_blank" class="btn">Apply Now</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSctYrTPY16zelNzPI_LT_2Blby1S-k_wYPVyAlq6b16jdbaTw/viewform?usp=publish-editor" target="_blank" class="btn">Apply Now</a>
     </div>
+  </div>
+
+  <!-- No Openings -->
+<div id="noRoles" style="display:none; margin-top:50px;">
+
+  <p class="subtext">
+    We’re not actively hiring at the moment, but we’re always open to connecting with individuals interested in AI/ML, research, and building real systems.
+  </p>
+
+  <p class="subtext" style="margin-top:15px;">
+    If you’re working on something interesting, feel free to reach out.
+  </p>
+
+  <a class="btn" href="mailto:myguidr@gmail.com" style="margin-top:25px;">
+    Reach Out
+  </a>
+
+</div>
   
 
 
@@ -212,6 +231,14 @@ footer{
   </footer>
 
 </div>
+
+  <script>
+  // Switch value for no openings
+  const isHiring = true;
+
+  document.getElementById("openRoles").style.display = isHiring ? "block" : "none";
+  document.getElementById("noRoles").style.display = isHiring ? "none" : "block";
+</script>
 
 
 </body>
