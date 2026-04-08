@@ -500,7 +500,7 @@ sections.forEach((section,index)=>{
 
 // counter
 const counter=document.getElementById("clientCounter");
-const target=11;let started=false;
+const target=12;let started=false;
 const counterObserver=new IntersectionObserver(entries=>{
  if(entries[0].isIntersecting&&!started){started=true;let count=0;
   const interval=setInterval(()=>{count++;counter.textContent=count;if(count>=target)clearInterval(interval)},50);
